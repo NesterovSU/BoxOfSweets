@@ -2,8 +2,9 @@
  * @author Sergey Nesterov
  */
 public abstract class Sweet {
-    private final int WEIGTH, COST;
-    private final String NAME;
+    private final int WEIGTH,       // вес сладости
+                        COST;       // цена
+    private final String NAME;      // название
     
     public Sweet(String name, int weight, int cost){
         this.NAME = name;
@@ -23,5 +24,5 @@ public abstract class Sweet {
         return NAME;
     }
 
-    public abstract String getInfo();
+    public abstract void showInfo();
 }
