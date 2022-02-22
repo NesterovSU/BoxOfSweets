@@ -9,6 +9,7 @@ public class Chocolate extends Sweet{
         this.COCOA = 75;
     }
 
+    @Override
     public void showInfo(){
         System.out.printf("Наименование: %s, содержание какао: %d,  вес: %d, цена: %d",
                 super.getName(),
