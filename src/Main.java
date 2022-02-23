@@ -16,7 +16,10 @@ public class Main {
         sb.showCost();
         sb.showWeight();
         sb.optimiseByCost(800);
-//        sb.optimiseByWeight(800);
+        sb.showInfo();
+        sb.showCost();
+        sb.showWeight();
+        sb.optimiseByWeight(750);
         sb.showInfo();
         sb.showCost();
         sb.showWeight();

@@ -67,9 +67,8 @@ public class SweetBox implements Api, IntelligenceOptimisations{
                 .sorted(Sweet::compareByCost)
                 .collect(Collectors.toList());
         while(weight <= boxWeight(sortedList)){
-            sortedList.remove(0);
+            list.remove(sortedList.remove(0));
         }
-        list = sortedList;
     }
 
     @Override
@@ -79,8 +78,7 @@ public class SweetBox implements Api, IntelligenceOptimisations{
                 .sorted(Sweet::compareByWeight)
                 .collect(Collectors.toList());
         while(weight <= boxWeight(sortedList)){
-            sortedList.remove(0);
+            list.remove(sortedList.remove(0));
         }
-        list = sortedList;
     }
 }
