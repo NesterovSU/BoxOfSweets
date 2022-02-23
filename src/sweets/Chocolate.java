@@ -1,3 +1,5 @@
+package sweets;
+
 /**
  * @author Sergey Nesterov
  */

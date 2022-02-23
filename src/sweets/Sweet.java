@@ -1,14 +1,25 @@
+package sweets;
+
 /**
  * @author Sergey Nesterov
  */
 public abstract class Sweet {
-    private final int WEIGTH,       // вес сладости
+
+    public static int compareByWeight(Sweet sweet, Sweet sweet1) {
+        return Integer.compare(sweet.getWeigth(), sweet1.getWeigth());
+    }
+
+    public static int compareByCost(Sweet sweet, Sweet sweet1) {
+        return Integer.compare(sweet.getCost(), sweet1.getCost());
+    }
+
+    private final int WEIGHT,       // вес сладости
                         COST;       // цена
     private final String NAME;      // название
     
     public Sweet(String name, int weight, int cost){
         this.NAME = name;
-        this.WEIGTH = weight;
+        this.WEIGHT = weight;
         this.COST = cost;
     }
 
@@ -17,7 +28,7 @@ public abstract class Sweet {
     }
 
     public int getWeigth() {
-        return WEIGTH;
+        return WEIGHT;
     }
 
     public String  getName() {

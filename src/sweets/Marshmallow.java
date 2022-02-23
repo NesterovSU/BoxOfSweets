@@ -1,8 +1,11 @@
+package sweets;
+
 /**
  * @author Sergey Nesterov
  */
 public class Marshmallow extends Sweet {
     private final String FORM;
+
     public Marshmallow(){
         super("Зефир", 150, 100);
         this.FORM = "круг";
