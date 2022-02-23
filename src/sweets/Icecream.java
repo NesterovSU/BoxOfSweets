@@ -7,13 +7,13 @@ public class Icecream extends Sweet{
     private final String PACKAGE;
 
     public Icecream(){
-        super("Мороженое", 50, 10);
-        this.PACKAGE = "Waffle cone";
+        super("Мороженое", 50, 70);
+        this.PACKAGE = "вафельный стакан";
     }
 
     @Override
     public void showInfo(){
-        System.out.printf("Наименование: %s, упаковка: %s,  вес: %d, цена: %d",
+        System.out.printf("Наименование: %s, упаковка: %s,  вес: %d, цена: %d\n",
                 super.getName(),
                 this.PACKAGE,
                 super.getWeigth(),

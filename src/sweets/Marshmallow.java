@@ -13,7 +13,7 @@ public class Marshmallow extends Sweet {
 
     @Override
     public void showInfo() {
-        System.out.printf("Наименование: %s, форма: %s,  вес: %d, цена: %d",
+        System.out.printf("Наименование: %s, форма: %s,  вес: %d, цена: %d\n",
                 super.getName(),
                 this.FORM,
                 super.getWeigth(),

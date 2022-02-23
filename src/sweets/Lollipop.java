@@ -8,12 +8,12 @@ public class Lollipop extends Sweet{
 
     public Lollipop(){
         super("Леденец", 60, 40);
-        this.TASTE = "Waffle cone";
+        this.TASTE = "апельсин";
     }
 
     @Override
     public void showInfo(){
-        System.out.printf("Наименование: %s, вкус: %s,  вес: %d, цена: %d",
+        System.out.printf("Наименование: %s, вкус: %s,  вес: %d, цена: %d\n",
                 super.getName(),
                 this.TASTE,
                 super.getWeigth(),

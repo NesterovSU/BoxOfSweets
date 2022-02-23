@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  */
 public class SweetBox implements Api, IntelligenceOptimisations{
 
-    List<Sweet> list = new LinkedList<>();
+    private List<Sweet> list = new LinkedList<>();
 
     @Override
     public boolean addSweet(Sweet sweet) {
@@ -37,7 +37,7 @@ public class SweetBox implements Api, IntelligenceOptimisations{
         Optional<Integer> weight = list.stream()
                 .map(Sweet::getWeigth)
                 .reduce(Integer::sum);
-        System.out.printf("Вес коробки: %s \\n", weight.isEmpty() ? "0" : weight.get());
+        System.out.printf("Вес коробки: %s \n", weight.isEmpty() ? "0" : weight.get());
     }
 
     @Override
@@ -45,7 +45,7 @@ public class SweetBox implements Api, IntelligenceOptimisations{
         Optional<Integer> cost = list.stream()
                 .map(Sweet::getCost)
                 .reduce(Integer::sum);
-        System.out.printf("Вес коробки: %s \\n", cost.isEmpty() ? "0" : cost.get());
+        System.out.printf("Стоимость коробки: %s \n", cost.isEmpty() ? "0" : cost.get());
     }
 
     @Override
@@ -62,6 +62,7 @@ public class SweetBox implements Api, IntelligenceOptimisations{
 
     @Override
     public void optimiseByCost(int weight) {
+        System.out.println("Оптимизация по цене");
         List<Sweet> sortedList = list.stream()
                 .sorted(Sweet::compareByCost)
                 .collect(Collectors.toList());
@@ -73,6 +74,7 @@ public class SweetBox implements Api, IntelligenceOptimisations{
 
     @Override
     public void optimiseByWeight(int weight) {
+        System.out.println("Оптимизация по весу");
         List<Sweet> sortedList = list.stream()
                 .sorted(Sweet::compareByWeight)
                 .collect(Collectors.toList());
